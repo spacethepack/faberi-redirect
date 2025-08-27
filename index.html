@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Redirecting…</title>
+
+  <!--
+    GitHub Pages Static Redirect
+    ------------------------------------------------------
+    Edit the DESTINATION_URL value below to your target URL (can include path, query, and hash).
+    This is a client-side redirect (not a true HTTP 302). Browsers will be redirected immediately.
+  -->
+  <script>
+    // === EDIT ME: set your destination URL here ===
+    const DESTINATION_URL = "https://bsky.app/profile/faberi.thepack.space";
+    // === END EDIT ===
+
+    // Prefer JS so history behaves like a 302-style (replace current entry).
+    (function() {
+      try {
+        window.location.replace(DESTINATION_URL);
+      } catch (e) {
+        // Fallback to assigning if replace fails for any reason
+        window.location = DESTINATION_URL;
+      }
+    })();
+  </script>
+
+  <!-- Meta refresh fallback for very old / JS-disabled browsers -->
+  <meta http-equiv="refresh" content="0; url=https://bsky.app/profile/faberi.thepack.space" />
+</head>
+<body style="font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+  <main style="max-width: 720px; margin: 10vh auto; padding: 24px;">
+    <h1 style="margin-bottom: 0.4em;">Redirecting…</h1>
+    <p>If you are not redirected automatically, <a href="https://bsky.app/profile/faberi.thepack.space">click here</a>.</p>
+    <p style="color:#666; font-size: 0.9em;">This site uses a static, client-side redirect hosted on GitHub Pages.</p>
+  </main>
+</body>
+</html>
